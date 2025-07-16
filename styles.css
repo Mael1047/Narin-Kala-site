@@ -38,6 +38,14 @@ body {
     margin: 0 auto;
     background-color: #e5ddc7;
   }
+
+  .slide img {
+    width: 44vw;
+    height: 25vw;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* чтобы изображение помещалось и сохраняло пропорции */
+  } 
 }
 
 /* На маленький экран */
@@ -73,6 +81,13 @@ body {
     align-items: center;
     margin: 0 auto;
     background-color: #e5ddc7;
+  }
+
+  .slide img {
+    width: 70%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
@@ -137,14 +152,6 @@ header a {
   display: flex;
   justify-content: center; /* центрирование по горизонтали */
   align-items: center; /* центрирование по вертикали */
-}
-
-.slide img {
-    width: 44vw;
-    height: 25vw;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* чтобы изображение помещалось и сохраняло пропорции */
 }
 
 /* Стили для кнопок */
