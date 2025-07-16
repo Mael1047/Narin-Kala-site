@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: system-ui;
+}
+
+/* На большой экран */
+@media (min-width: 1246px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #e5ddc7;
+  }
+
+  header h1 {
+    color: #5b4242;
+    font-size: xxx-large;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vh;
+    margin-right: 110vh;
+  }
+
+  .main {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #f0f1d1;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #e5ddc7;
+  }
+}
+
+/* На маленький экран */
+@media (max-width: 1245px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #e5ddc7;
+  }
+
+  header h1 {
+    color: #5b4242;
+    font-size: xxx-large;
+  }
+
+  .main {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #f0f1d1;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #e5ddc7;
+  }
+}
+
+header img {
+    width: 76.8px;
+}
+
+header a {
+    color: #624d4d;
+    font-size: x-large;
+}
+
+.preface {
+    padding: 5vh;
+    color: #5b4242;
+    background-color: #e5ddc7;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 19px;
+    padding-right: 19px;
+    background-color: #f0f1d1;
+}
+
+.Pmenu {
+  margin: 0;
+}
+
+.footer a {
+  color: #5b4242;
+  font-size: larger;
+}
+
+#heading2 {
+  width: 186px;
+  color: #5b4242;
+}
+
+.slider-container {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative; /* для позиционирования кнопок */
+  border: 1px solid #f0f1d1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  transition: transform 0.5s ease-in-out; /* плавный переход */
+}
+
+.slide {
+  flex-shrink: 0; /* чтобы слайды не сжимались */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* центрирование по горизонтали */
+  align-items: center; /* центрирование по вертикали */
+}
+
+.slide img {
+    width: 44vw;
+    height: 25vw;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* чтобы изображение помещалось и сохраняло пропорции */
+}
+
+/* Стили для кнопок */
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Кнопки меню */
+button {
+  border-color: #e5ddc7;
+}
+
+.button {
+  background-color: #f0f1d1;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #5b4242;
+  width: 185px;
+}
+
+.popup {
+  display: none; /* Скрываем окно по умолчанию */
+  position: fixed; /* Фиксированное позиционирование, чтобы окно не прокручивалось */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  z-index: 1000; /*  Устанавливаем высокий z-index, чтобы окно было поверх всего */
+  font-weight: 700;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрируем окно */
+  background-color: #e5ddc7;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%; /* Задаем ширину окна */
+  max-width: 600px; /* Максимальная ширина */
+  color: #5b4242;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
