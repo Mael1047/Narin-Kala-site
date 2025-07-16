@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setInterval(function() {
     slideIndex++;
     showSlide(slideIndex);
-  }, 555000); // переключать каждые 5 секунд
+  }, 5000); // переключать каждые 5 секунд
 });
 
 // Кнопки меню
